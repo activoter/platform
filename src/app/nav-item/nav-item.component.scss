@@ -1,0 +1,16 @@
+li {
+	list-style-type: none;
+}
+a {
+	color: rgba(255, 255, 255, 0.8);
+	width: 100%;
+	padding: 20px;
+	float: left;
+	text-transform: uppercase;
+	text-align: center;
+	text-decoration: none;
+	&:hover {
+		background: rgba(0, 0, 0, 0.1);
+		color: #fff;
+	}
+}

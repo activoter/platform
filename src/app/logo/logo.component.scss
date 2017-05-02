@@ -1,0 +1,20 @@
+li {
+	list-style-type: none;
+}
+.logo {
+	width: 100%;
+	padding: 20px;
+	float: left;
+	&:hover {
+		background: rgba(0, 0, 0, 0.1);
+	}
+	img {
+		width: 50%;
+		margin: 0 auto;
+		opacity: 0.9;
+		display: block;
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
