@@ -1,20 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
 
 /* Global */
+@import '/assets/styles/brand';
+
 * {
 	box-sizing: border-box;
 	transition: 0.3s;
 }
-body {
-	color: #444;
+body, button {
+	color: #333;
 	margin: 0;
 	font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
 	font-size: 16px;
 }
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h5, h6 {
 	text-transform: uppercase;
 }
-h1, h2, h3, h4, h5, h6, p, a {
+h1, h2, h3, h4, h5, h6, p, a, li, button {
 	font-weight: 300;	
 }
 h1 { font-size: 3em }
@@ -22,8 +24,8 @@ h2 { font-size: 2.5em }
 h3 { font-size: 2em }
 h4 { font-size: 1.5em }
 h5 { font-size: 1em }
-h6 { font-size: 0.5em }
-p  { font-size: 1em }
+h6 { font-size: 0.8em }
+p, a, button  { font-size: 1em }
 
 /* Modules */
 app-root {
@@ -34,6 +36,26 @@ app-root {
 	left: 0;
 	float: left;
 }
+#contents {
+	margin-left: $nav_size;
+	float: left;
+}
+.page {
+	width: $body_size;
+	height: 100%;
+	padding: 40px;
+	position: fixed;
+	overflow: auto;
+}
+.overlay {
+	width: $body_size;
+	height: 100%;
+	padding: 40px;
+	position: fixed;
+	top: 0;
+	left: $nav_size;
+	overflow: auto;
+}
 .load-screen {
 	width: 200px;
 	height: auto;
@@ -41,4 +63,13 @@ app-root {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+}
+.center {
+	text-align: center;
+}
+.visible {
+    display: block;
+}
+.hidden {
+    display: none;
 }

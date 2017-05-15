@@ -1,0 +1,12 @@
+footer {
+	background: rgba(0, 0, 0, 0.1);
+	color: rgba(255, 255, 255, 0.4);
+	width: 100%;
+	padding: 20px;
+	text-align: center;
+	position: absolute;
+	bottom: 0;
+}
+h6 {
+	margin: 0;
+}

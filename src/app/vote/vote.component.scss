@@ -1,0 +1,24 @@
+@import '../../assets/styles/brand';
+
+.page {
+	background: url('../../assets/images/bg-lincoln_memorial-2.jpg');
+	background-size: cover;
+	background-position: center;
+	color: #fff;
+}
+.overlay {
+	background: $primary_blue_light_transparent;
+}
+.login {
+	background-color: rgb(230,230,230);
+	border: none;
+	border-radius: 5px;
+	margin-top: 10px;
+	padding: 10px 20px;
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	&:hover {
+		background: #fff;
+	}
+}

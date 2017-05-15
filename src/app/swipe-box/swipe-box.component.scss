@@ -1,0 +1,82 @@
+@import '../../assets/styles/brand';
+
+.swipe-box {
+	background: #fff;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    border-radius: 5px;
+	box-shadow: 0 5px 5px 0 rgba(0,0,0,0.5);
+    display: block;
+	position: relative;
+	overflow: hidden;
+}
+.slide {
+    img {
+    	height: 340px;
+    	float: left;
+    }
+}
+.header {
+	background: rgba(255, 255, 255, 0.5);
+	color: #333;
+	width: 100%;
+	padding: 20px;
+	float: left;
+	h5 {
+		margin: 0;
+	}
+}
+.footer {
+	background: rgba(255, 255, 255, 0.5);
+	color: #333;
+	width: 100%;
+    text-transform: capitalize;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+button {
+	background-color: rgba(0,0,0,0);
+	background-size: 16px auto;
+	background-position: center 10px;
+	background-repeat: no-repeat;
+	color: #fff;
+	width: 60px;
+	height: 60px;
+	padding: 20px 0 0 0;
+	border: 3px solid #fff;
+	border-radius: 50%;
+	text-transform: uppercase;
+	position: absolute;
+	bottom: 20px;
+	&:hover {
+		box-shadow: 0 5px 5px 0 rgba(0,0,0,0.5);
+	}
+	&.info {
+		background-image: url('../../assets/images/icon-info.png');
+		background-color: rgb(230,230,230);
+		color: #333;
+		left: 50%;
+		transform: translateX(-50%);
+		&:hover {
+			background-color: #fff;
+		}	
+	}
+	&.arrow-up {
+		background-image: url('../../assets/images/icon-arrow_up.png');
+		background-color: $primary_blue_dark;
+		left: 20px;
+		&:hover {
+			background-color: $primary_blue_light;
+		}
+	}
+	&.arrow-down {
+		background-image: url('../../assets/images/icon-arrow_down.png');
+		background-color: $primary_red_dark;
+		right: 20px;
+		&:hover {
+			background-color: $primary_red_light;
+		}
+	}
+}

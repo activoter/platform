@@ -1,0 +1,22 @@
+<div class="swipe-box">
+	<div class='slide'
+	*ngFor="let item of items; let idx = index"
+	(swipeleft)="swipe(idx, $event.type)"
+	(swiperight)="swipe(idx, $event.type)"
+	(swipeup)="swipe(idx, $event.type)"
+	[class.visible]="item.visible && item.vote === null"
+	[class.hidden]="!item.visible || item.vote !== null"
+	>
+		<div class="header">
+			<h5>{{item.name}}</h5>
+		</div>
+		<div>
+			<img [src]='item.image' [alt]='item.name'>
+		</div>
+		<div class="footer">
+			<button class='arrow-up' (click)='swipe(idx, swipeleft)'>Yes</button>
+			<button class='info' (click)='swipe(idx, swipeup)'>Info</button>
+			<button class='arrow-down' (click)='swipe(idx, swiperight)'>No</button>
+		</div>
+	</div>
+</div>

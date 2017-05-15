@@ -1,3 +1,8 @@
+<li>
+	<a class='logo' routerLink="/home" routerLinkActive="active">
+		<app-logo></app-logo>
+	</a>
+</li>
 <li *ngFor='let page of pages'>
-  <a href='{{page.name}}'>{{page.name}}</a>
+	<a routerLink="/{{page.name}}" routerLinkActive="active">{{page.name}}</a>
 </li>

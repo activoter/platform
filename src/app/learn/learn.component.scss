@@ -1,0 +1,43 @@
+@import '../../assets/styles/brand';
+
+.page {
+	background: url('../../assets/images/bg-lincoln_memorial-2.jpg');
+	background-size: cover;
+	background-position: center;
+	color: #fff;
+}
+.overlay {
+	background: $primary_red_light_transparent;
+}
+ul {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+}
+li {
+	width: 25%;
+	padding: 10px;
+	list-style-type: none;
+	float: left;
+	a {
+		color: rgba(255, 255, 255, 0.8);
+		text-decoration: none;
+		&:hover {
+			color: #fff;
+		}
+	}
+	img {
+		width: 100%;
+		box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.8);
+		-webkit-filter: grayscale(100%);
+		-moz-filter: grayscale(100%);
+		-ms-filter: grayscale(100%);
+		-o-filter: grayscale(100%);
+		filter: gray;
+		&:hover {
+			box-shadow: 0 0 0 2px rgba(255, 255, 255, 1);
+			filter: none;
+		}
+	}
+}

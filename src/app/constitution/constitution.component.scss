@@ -1,0 +1,12 @@
+h1, h2, h3, h4 {
+	text-align: center;
+}
+li {
+	padding: 5px;
+	&:hover {
+		background: rgba(255, 255, 0, 0.1);
+	}
+}
+.small {
+	font-size: 0.75em;
+}
