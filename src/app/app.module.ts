@@ -20,6 +20,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { ContactComponent } from './contact/contact.component';
 import { SwipeBoxComponent } from './swipe-box/swipe-box.component';
 import { VoterRegistrationComponent } from './voter-registration/voter-registration.component';
+import { BallotComponent } from './ballot/ballot.component';
+import { MeasureComponent } from './measure/measure.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -53,7 +55,9 @@ const appRoutes: Routes = [
     ProfileComponent,
     ContactComponent,
     SwipeBoxComponent,
-    VoterRegistrationComponent
+    VoterRegistrationComponent,
+    BallotComponent,
+    MeasureComponent
   ],
   imports: [
     BrowserModule,

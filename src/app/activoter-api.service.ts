@@ -6,9 +6,10 @@ import 'rxjs/Rx';
 
 export class ActivoterApiService {
   constructor(private http: Http) { }
+
   retrieveData(route) {
 	return this.http.get(`https://activoter-api.herokuapp.com/${route}`)
 		.map(data => data.json())
-//		.subscribe(route => this.data = route)
+//		.subscribe(route => this.ballots = route)
   }
 }

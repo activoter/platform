@@ -1,0 +1,19 @@
+<div class='ballot' [id]='ballot._id'>
+	<div class='header' (click)='toggle()'>
+		<div class='info'>
+			<h3>{{ballot.name}}</h3>
+			<h5>{{ballot.location.name}}</h5>
+			<p><i>{{ballot.date}}</i></p>
+		</div>		
+	</div>
+	<div
+		class='measures'
+		[class.visible]='open'
+		[class.hidden]='!open'>
+		<button>Add measure</button>
+		<app-measure
+			*ngFor='let measure of ballot.measures'
+			[measure]='ballot.measure'>
+		</app-measure>
+	</div>
+</div>

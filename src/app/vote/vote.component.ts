@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
 import { ActivoterApiService } from '../activoter-api.service'
 
 @Component({
@@ -13,21 +13,26 @@ export class VoteComponent implements OnInit {
   constructor(private api: ActivoterApiService) { }
 
   user = {
-  	voter: true
+  	voter: false
   }
+
   toggle = () => this.user.voter = !this.user.voter
 
   ballots = []
 
   getBallots() {
-    this.ballots.push(this.api.retrieveData('ballots'))
-    let responder = (collection) => {
-      for (let item of collection) {
-        console.log('Ballot retrieved: ID ' + item._id)        
-      }
-    }
-    responder(this.ballots)
+    this.api.retrieveData('ballots')
+      .subscribe(
+        res => {
+          console.log(res)
+          this.ballots = res
+        },
+        error => console.log(error)
+      )
   }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.getBallots()
+  }
+
 }

@@ -15,3 +15,12 @@ $primary_red_dark_transparent: rgba(193, 39, 45, 0.5);
 
 $nav_size: 200px;
 $body_size: calc(100% - 200px);
+
+$vote_gradient: linear-gradient(
+	90deg,
+	$primary_blue_light,
+	$primary_blue_dark,
+	#333,
+	$primary_red_dark,
+	$primary_red_light
+);

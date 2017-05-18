@@ -1,14 +1,34 @@
 <div class='page center'>
 	<div class='overlay'>
-		<button class='login' (click)='toggle()'>
-			<span [class.visible]="!user.voter" [class.hidden]="user.voter">Login</span>
-			<span [class.visible]="user.voter" [class.hidden]="!user.voter">Logout</span>
-		</button>
+
 		<h1>Vote</h1>
-		<h3>Don't hesitate... participate!</h3>
-		<app-voter-registration [class.visible]="!user.voter" [class.hidden]="user.voter"></app-voter-registration>
-		<app-swipe-box [class.visible]="user.voter" [class.hidden]="!user.voter"></app-swipe-box>
-		<br>
-		<button (click)="getBallots()">Ballots</button>
+		<h2>Don't hesitate... participate!</h2>
+
+		<button class='login' (click)='toggle()'>
+			<span
+				[class.visible]="!user.voter"
+				[class.hidden]="user.voter">
+				Login
+			</span>
+			<span
+				[class.visible]="user.voter"
+				[class.hidden]="!user.voter">
+				Logout
+			</span>
+		</button>
+
+		<app-voter-registration
+			[class.visible]='!user.voter'
+			[class.hidden]='user.voter'>
+		</app-voter-registration>
+
+		<app-ballot
+			*ngFor='let ballot of ballots'
+			[ballot]='ballot'
+			[class.visible]='user.voter'
+			[class.hidden]='!user.voter'>
+			<p>...</p>
+		</app-ballot>
+
 	</div>
 </div>

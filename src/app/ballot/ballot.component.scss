@@ -1,0 +1,25 @@
+/* Global */
+@import '../../assets/styles/brand';
+
+.ballot {
+	background: #fff;
+	color: #333;
+	width: 400px;
+	margin-bottom: 20px;
+	display: inline-block;
+	.header {
+		width: 100%;
+		.status, .info {
+			padding: 20px;
+		}
+		.status {
+			width: 100%;
+		}
+		.info {
+			width: 100%;
+		}
+		.yellow {
+			background: #f9d53d;
+		}
+	}
+}
