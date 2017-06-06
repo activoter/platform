@@ -16,7 +16,8 @@ export class NavItemComponent implements OnInit {
     {name: 'explore'},
     {name: 'learn'},
     {name: 'support'},
-    {name: 'contact'}
+    {name: 'contact'},
+    {name: 'login'}
   ]
 
   ngOnInit() { }
