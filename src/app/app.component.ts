@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'
 import {
   Router,
   Event as RouterEvent,
@@ -6,34 +6,39 @@ import {
   NavigationEnd,
   NavigationCancel,
   NavigationError
-} from '@angular/router';
+} from '@angular/router'
+import { ActivoterApiService } from './activoter-api.service'
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
+//  providers: [ActivoterApiService]
 })
+
 export class AppComponent {
-  /*
-  loading: boolean = true;
-  constructor(private router: Router) {
-    router.events.subscribe((event: RouterEvent) => {
-      this.navigationInterceptor(event);
-    });
+/*
+  constructor(private api: ActivoterApiService) { }
+
+  user = {}
+
+/*
+  login(formData) {
+    console.log(formData)
+    this.api.createData('login', formData)
+      .map(
+        res => console.log(res)
+      )
+      /*
+      .subscribe(
+        res => {
+          console.log(res)
+          this.user = res
+        },
+        error => console.log(error)
+      )
   }
-  navigationInterceptor(event: RouterEvent): void {
-    if (event instanceof NavigationStart) {
-      this.loading = true;
-    }
-    if (event instanceof NavigationEnd) {
-      this.loading = false;
-    }
-	if (event instanceof NavigationCancel) {
-      this.loading = false;
-    }
-    if (event instanceof NavigationError) {
-      this.loading = false;
-	}
-  }
-  */
+      */
+
 }

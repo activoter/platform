@@ -1,0 +1,8 @@
+<div class='page center'>
+	<h1>Welcome back!</h1>
+	<form (ngSubmit)='login(user)'>
+		<input type='text' name='email' placeholder='Email' [(ngModel)]='user.email' required />
+		<input type='password' name='password'  placeholder='Password' [(ngModel)]='user.password' required />
+		<input type='submit' name='login' value='Log in'>
+	</form>
+</div>
