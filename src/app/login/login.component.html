@@ -1,8 +1,10 @@
 <div class='page center'>
-	<h1>Welcome back!</h1>
-	<form (ngSubmit)='login(user)'>
-		<input type='text' name='email' placeholder='Email' [(ngModel)]='user.email' required />
-		<input type='password' name='password'  placeholder='Password' [(ngModel)]='user.password' required />
+	<h1 *ngIf='!user._id'>Welcome!</h1>
+	<h1 *ngIf='user._id && !user.name'>Welcome back!</h1>
+	<h1 *ngIf='user._id && user.name'>Welcome back, {{user.name}}!</h1>
+	<form (ngSubmit)='login(form)'>
+		<input type='text' name='email' placeholder='Email' [(ngModel)]='form.email' required />
+		<input type='password' name='password'  placeholder='Password' [(ngModel)]='form.password' required />
 		<input type='submit' name='login' value='Log in'>
 	</form>
 	<p>Don't have an account yet? <a routerLink='/signup'>Sign up</a></p>

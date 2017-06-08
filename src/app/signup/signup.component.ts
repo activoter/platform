@@ -12,6 +12,8 @@ export class SignupComponent implements OnInit {
 
 	constructor(private api: ActivoterApiService) { }
 
+	form = {}
+
 	user = {}
 
 	signup(formData) {

@@ -1,8 +1,8 @@
 <div class='page center'>
 	<h1>Get started!</h1>
-	<form (ngSubmit)='signup(user)'>
-		<input type='text' name='email' placeholder='Email' [(ngModel)]='user.email' required />
-		<input type='password' name='password'  placeholder='Password' [(ngModel)]='user.password' required />
+	<form (ngSubmit)='signup(form)'>
+		<input type='text' name='email' placeholder='Email' [(ngModel)]='form.email' required />
+		<input type='password' name='password'  placeholder='Password' [(ngModel)]='form.password' required />
 		<input type='submit' name='signup' value='Sign up'>
 	</form>
 	<p>Already registered? <a routerLink='/login'>Log in</a></p>

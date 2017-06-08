@@ -12,18 +12,19 @@ export class LoginComponent implements OnInit {
 
 	constructor(private api: ActivoterApiService) { }
 
+	form = {}
+
 	user = {}
 
 	login(formData) {
-		console.log(formData)
-		return this.api.createData('login', formData)
-			.subscribe(
-				res => {
-					console.log(res)
-					this.user = res
-				},
-				error => console.log(error)
-			)
+		console.log('Form data:', formData)
+		return this.api.createData('login', formData).subscribe(
+			res => {
+				console.log(res)
+				this.user = res
+			},
+			error => console.log(error)
+		)
 	}
 
 	ngOnInit() { }
